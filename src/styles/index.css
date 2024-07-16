@@ -1,0 +1,302 @@
+/* Global Styles */
+* {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+body{
+    font-family: 'SF Pro', Arial, sans-serif;
+    margin: 0;
+    padding: 100px 50px 100px 50px;
+    background-color: #f4f4f4;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    horizontal-padding: 100px;
+    gap: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    max-width: 9999px!important;
+}
+button{
+    font-weight: 500;
+    border-radius: 6px;
+    font-size: 14px;
+}
+summary:hover,
+button:hover{
+    cursor: pointer;
+}
+button:disabled:hover{
+    cursor: default;
+}
+input {
+    width: 45%;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .005em;
+    font-weight: 400;
+}
+label{
+    font-weight: 700;
+}
+
+/* Root div */
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Header text Container */
+.intro {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 100px 0em 100px;
+    padding: 0.6em;
+}
+/* Styles for the main heading */
+ h1 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Guardian, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+}
+/* Styles for the subheading */
+.subheading {
+    margin-bottom: 40px;
+    font-family: 'BentonSans', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #53565A;
+}
+/* Calculator div */
+.calculator{
+    background-color: #fff;
+    width: 730px;
+    padding: 0.6em;
+    margin-bottom: 4em;
+}
+.calculator, 
+input{
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Card div */
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Label containers */
+.labels{
+    font-size: 16px;
+    font-family: 'SF Pro', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.helpDiv{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Inputs & Outputs */
+.inputRow{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.6em 0 1.5em 0;
+    width: 100%;
+}
+input {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: .15s;
+    padding: 8px 16px;
+    height: 40px;
+    border: 1px solid #d0d7f0;
+    outline: 0;
+    margin: 0 8px 0 0;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .005em;
+}
+output {
+    display: flex;
+    flex-direction: column; /* Change to column for labels and output in rows */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-end; /* Align items to the left */
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: .15s;
+    padding: 10px; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust based on content */
+    border-bottom: 1px solid #d0d7f0;
+    outline: 0;
+    margin: 0 10px 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: .005em;
+    text-align: left; /* Align text to the left */
+}
+
+input:focus,
+input:hover,
+input:active{
+    outline: 0;
+    border-color: #97a7f1;
+    box-shadow: 0 0 0 4px #eff2f9;
+}
+aside {
+    width: 300px;
+    float: right;
+    background-color: #fff;
+    height: 100%;
+    margin-right: 30px;
+    margin-top: 29px;
+  }
+    aside h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+.results-container {
+    /* ... styles for desktop view ... */
+    display: flex;
+    flex-direction: column; /* Arrange results vertically */
+    align-items: flex-end; /* Align individual rows to the bottom */
+    align-items: right;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+
+.outputTop{
+    display: flex; /* Add flexbox to the outputTop container */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Align items vertically */
+    font-size: 15px;
+    margin: 0.6em;
+}
+
+/* Output labels */
+.outputLabels {
+    font-size: 16px;
+    font-family: 'SF Pro', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start; /* Align labels to the left */
+    margin-bottom: 10px;
+}
+.results-total {
+    margin-top: auto; /* Push the total row to the bottom */
+}
+
+
+/* Button containers */
+.btnFloatLeft{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.buttonRow{
+    display: flex;
+    padding: 1.2em 0;
+    justify-content: flex-start;
+    width: 100%;
+}
+/* Button styles */
+.disabledBtn{
+    border-style: solid;
+    padding: 7px 15px;
+}
+.submit{
+    padding: 8px 16px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.addBtn {
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    color: #006FCF;
+    background-color: transparent;
+    margin-top: 20px;
+}
+.submit{
+    padding: 10px;
+    background-color: #006FCF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 127px;
+}
+.addBtn:hover {
+    color: #0056b3;
+}
+.submit:hover{
+    background-color: #0056b3;
+}
+
+
+
+/* Misc add-on styles */
+.red{
+    color: rgb(175 17 17);
+}
+.black{
+    color: black;
+}
+.hide{
+    display: none;
+}
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .results-container {
+        /* ... styles for desktop view ... */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,384 @@
+/* General styles for the page */
+body {
+    font-family: 'SF Pro', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Container to hold the main content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the main heading */
+h1 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Guardian, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+/* Introductory text */
+.intro-text {
+    margin-bottom: 40px;
+    font-family: 'BentonSans', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #53565A;
+}
+
+/* Wrapper for the input and result sections */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Styles for the content section */
+.content,
+.result-container {
+    width: calc(50% - 15px);
+}
+
+/* Margin to separate content and result sections */
+.content {
+    margin-right: 15px;
+}
+
+/* Styles for the result container */
+.result-container {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    padding: 10px;
+    height: 124px;
+    align-self: flex-start;
+    transition: height 0.3s ease;
+    border: none;
+   outline: none;
+}
+
+/* Height when results are displayed */
+.result-container.show-result {
+    height: 204px;
+}
+
+/* Centering and styling result content */
+.result-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles for the result text */
+.result-text {
+    font-size: 20px;
+    line-height: 28px;
+    color: #00081F;
+    padding-bottom: 17px;
+    font-family: 'BentonSans', Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* Styles for the calculated result amount */
+.result-amount {
+    font-size: 56px;
+    font-weight: 700;
+    color: #006FCF;
+    font-family: 'BentonSans', Arial, sans-serif;
+}
+
+/* Styles for the loan display text */
+.result-loan {
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+    font-family: 'BentonSans', Arial, sans-serif;
+}
+
+/* Styles for awaiting result text */
+.result-awaiting {
+    font-size: 16px;
+    color: #595959;
+}
+
+/* Padding for the monthly payment element */
+#monthlyPayment {
+    padding-bottom: 15px;
+    line-height: normal !important;
+}
+
+/* General label styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'SF Pro', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* Wrapper for input fields with dollar sign */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group .percent-sign,
+.input-group .dollar-sign {
+    position: absolute;
+    left: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    font-family: 'BentonSans', Arial, sans-serif;
+    top: 9px;
+}
+
+.input-group input {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'SF Pro', Arial, sans-serif;
+    background-color: #FFF;
+    color: #3D3D3D;
+}
+
+/* General input styles */
+input[type="text"],
+.loan-input {
+    padding: 8px 8px 8px 20px;
+    border: 1px solid #8E9092;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 95%;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'SF Pro', Arial, sans-serif;
+    background-color: #FFF;
+}
+
+/* Styles for error messages */
+.error {
+    color: #B42C01;
+    ;
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: none !important;
+}
+
+.error.show {
+    display: block !important;
+}
+
+input[type="text"].input-error {
+    border-color: #B42C01;
+     !important;
+}
+
+/* Styles for the expandable car details section */
+.car-details {
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+    max-height: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.car-details.expanded {
+    padding: 20px;
+    max-height: none !important;
+    background-color: #F7F8F9 !important;
+    border: 1px solid #ECEDEE !important;
+    margin-top: 20px;
+}
+
+.car-details input[type="text"] {
+    width: 100%;
+    max-width: 95%;
+    padding: 8px 8px 8px 15px;
+}
+
+/* Styles for the accordion control */
+.accordion {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    color: #006FCF;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.accordion span {
+    display: inline-block;
+    transition: transform 0.3s, margin-top 0.3s;
+    padding-right: 12px;
+    /* Adjust to keep the text from jumping */
+}
+
+.caret-expanded {
+    margin-top: -2px;
+}
+
+/* Panel for expandable sections */
+.panel {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+#loanTermError,
+#loanAmountError,
+#interestRateError {
+    margin-bottom: 0;
+}
+
+label {
+    margin-top: 35px;
+}
+
+label[for="loanAmount"] {
+    margin-top: 0px;
+}
+
+label[for="loanTerm"] {
+    margin-top: 15px;
+}
+
+label[for="carPrice"] {
+    margin-top: 5px;
+}
+
+#loanAmountError {
+    display: none;
+}
+
+#loanAmount {
+    padding: 8px 8px 8px 15px;
+    color: #3D3D3D;
+}
+
+#loanTerm {
+    padding: 8px 8px 8px 5px;
+    color: #3D3D3D;
+
+}
+
+
+/* end new styles ***************************/
+
+/* Styles for buttons */
+.button {
+    padding: 10px;
+    background-color: #006FCF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 127px;
+}
+
+.button:disabled {
+    color: #8E9092;
+    background-color: #F7F8F9;
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Legal disclaimer styles */
+.disclaimer {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-family: 'SF Pro', Arial, sans-serif;
+    color: #595959;
+    margin-top: 45px;
+    text-align: left;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 786px) {
+    .content-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .content,
+    .result-container {
+        width: 100%;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .result-container {
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    .result-container.show-result {
+        display: flex;
+        height: 204px;
+    }
+
+    .intro-text {
+        margin-bottom: 40px;
+    }
+
+    #updateTotal {
+        width: 100% !important;
+    }
+
+    #calculateButton {
+        width: calc(98% + 17px) !important;
+    }
+}
+
+@media (min-width: 787px) {
+    .intro-text {
+        margin-bottom: 40px;
+    }
+}
+
+.accordion-icon .right-icon {
+    transform: rotate(0deg);
+}
+
+.accordion-icon .right-icon:hover {
+    cursor: pointer;
+}
+
+.accordion-icon .right-icon.caret-expanded {
+    transform: rotate(90deg);
+}
