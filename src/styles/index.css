@@ -5,7 +5,7 @@
 body{
     font-family: 'SF Pro', Arial, sans-serif;
     margin: 0;
-    padding: 100px 50px 100px 50px;
+    padding: 2.5%;
     background-color: #f4f4f4;
 }
 .container {
@@ -14,10 +14,12 @@ body{
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-    horizontal-padding: 100px;
-    gap: 50px;
+    width: 80%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
