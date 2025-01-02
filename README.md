@@ -1,3 +1,5 @@
+![Credit Utilization](credit-util.png)
+
 # Credit Utilization App
 
 ## What it does:
